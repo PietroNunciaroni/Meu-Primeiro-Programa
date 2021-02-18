@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="prodpacoteDataSet3" targetNamespace="http://tempuri.org/prodpacoteDataSet3.xsd" xmlns:mstns="http://tempuri.org/prodpacoteDataSet3.xsd" xmlns="http://tempuri.org/prodpacoteDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="prodpacoteConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="prodpacoteConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjetoTcc.Properties.Settings.GlobalReference.Default.prodpacoteConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pacoteTableAdapter" GeneratorDataComponentClassName="pacoteTableAdapter" Name="pacote" UserDataComponentName="pacoteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="prodpacoteConnectionString1 (Settings)" DbObjectName="prodpacote.pacote" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ID_Pacote`, `Nome`, `peca`, `FK_ID_Produto`, `Quantidade`, `Data_entrada`, `Data_saida` FROM `pacote`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="produtoTableAdapter" GeneratorDataComponentClassName="produtoTableAdapter" Name="produto" UserDataComponentName="produtoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="prodpacoteConnectionString1 (Settings)" DbObjectName="prodpacote.produto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ID_Produto`, `Nome`, `Descricao`, `Preco`, `status` FROM `produto`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="consulta_lucroTableAdapter" GeneratorDataComponentClassName="consulta_lucroTableAdapter" Name="consulta_lucro" UserDataComponentName="consulta_lucroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="prodpacoteConnectionString1 (Settings)" DbObjectName="prodpacote.consulta_lucro" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ID_Pacote`, `Nome`, `peca`, `FK_ID_Produto`, `Quantidade`, `Data_entrada`, `Data_saida`, `Lucro` FROM `prodpacote`.`consulta_lucro`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="prodpacoteDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="prodpacoteDataSet3" msprop:Generator_UserDSName="prodpacoteDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="pacote" msprop:Generator_TableClassName="pacoteDataTable" msprop:Generator_TableVarName="tablepacote" msprop:Generator_TablePropName="pacote" msprop:Generator_RowDeletingName="pacoteRowDeleting" msprop:Generator_RowChangingName="pacoteRowChanging" msprop:Generator_RowEvHandlerName="pacoteRowChangeEventHandler" msprop:Generator_RowDeletedName="pacoteRowDeleted" msprop:Generator_UserTableName="pacote" msprop:Generator_RowChangedName="pacoteRowChanged" msprop:Generator_RowEvArgName="pacoteRowChangeEvent" msprop:Generator_RowClassName="pacoteRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="produto" msprop:Generator_TableClassName="produtoDataTable" msprop:Generator_TableVarName="tableproduto" msprop:Generator_TablePropName="produto" msprop:Generator_RowDeletingName="produtoRowDeleting" msprop:Generator_RowChangingName="produtoRowChanging" msprop:Generator_RowEvHandlerName="produtoRowChangeEventHandler" msprop:Generator_RowDeletedName="produtoRowDeleted" msprop:Generator_UserTableName="produto" msprop:Generator_RowChangedName="produtoRowChanged" msprop:Generator_RowEvArgName="produtoRowChangeEvent" msprop:Generator_RowClassName="produtoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="consulta_lucro" msprop:Generator_TableClassName="consulta_lucroDataTable" msprop:Generator_TableVarName="tableconsulta_lucro" msprop:Generator_TablePropName="consulta_lucro" msprop:Generator_RowDeletingName="consulta_lucroRowDeleting" msprop:Generator_RowChangingName="consulta_lucroRowChanging" msprop:Generator_RowEvHandlerName="consulta_lucroRowChangeEventHandler" msprop:Generator_RowDeletedName="consulta_lucroRowDeleted" msprop:Generator_UserTableName="consulta_lucro" msprop:Generator_RowChangedName="consulta_lucroRowChanged" msprop:Generator_RowEvArgName="consulta_lucroRowChangeEvent" msprop:Generator_RowClassName="consulta_lucroRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
